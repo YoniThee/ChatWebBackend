@@ -42,7 +42,7 @@ docker build -t my-chat-app .
 2. Run the Docker Container:
 ```
 Bash
-docker run -it --rm -p 5001:5001 my-chat-app
+docker run -it --rm -p 5009:8080 app-chat-web
 ```
 
 ## Notes
