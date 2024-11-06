@@ -27,4 +27,11 @@ RUN dotnet publish "./ChatWeb.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+# Set environment variables for SQL Server connection
+ENV SQL_SERVER=DESKTOP-6PQJSFF
+ENV SQL_DATABASE=myChatApp
+ENV TRUSTED_CONNECTION=True
+ENV TRUST_SERVER_CERTIFICATE=True
+
 ENTRYPOINT ["dotnet", "ChatWeb.dll"]
