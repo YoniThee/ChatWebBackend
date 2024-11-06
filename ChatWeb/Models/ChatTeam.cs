@@ -1,4 +1,6 @@
-﻿namespace ChatWeb.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ChatWeb.Models
 {
     public class ChatTeam
     {
@@ -18,6 +20,9 @@
 
     }
     public class MessageUser {
+        [Key]
+        public string messageId { get; set; } = new Guid().ToString();
+
         public string UserName { get; set; } = string.Empty;
         public string Message { get; set; } = string.Empty;
     }
