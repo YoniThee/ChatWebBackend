@@ -95,5 +95,5 @@ docker run -it --rm -p 5009:8080 app-chat-web
 ```
 
 ## Notes
-* this app is using cashe memory only, its mean that after  each run all the data will disapere. if you wat to connect to your local data cbase the sharedDb is already contains important classes to enable fluent change to use another DB.
+* in this app configured user {username= "admin", password="123"}  as the username to provide administrator-only privileges (e.g., viewing all users, deleting users). Currently, this definition is hardcoded within the chatHub constructor. the reason is to make it more easy to everyone how will take this repo and use it witout start creating manually the damin at the local DB
 * currrently the app is configured to run on port 5009. you can change it easely in two files - ChatWeb\ChatWeb\ChatWeb.http and ChatWeb\ChatWeb\Properties\launchSettings.json
